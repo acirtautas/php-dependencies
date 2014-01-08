@@ -51,4 +51,4 @@ foreach( $cd->getFoundClasses() as $class ) {
 }
 
 echo "Scanned code uses following php extensions: ";
-echo implode(array_keys($ext),"\n* "), "\n\n";
+echo "\n* ", implode(array_keys($ext),"\n* "), "\n\n";

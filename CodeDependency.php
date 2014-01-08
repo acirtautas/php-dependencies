@@ -137,5 +137,14 @@ class CodeDependency {
         elseif ( $token == ')' ) {
             $this->buffer_start = false;
         }
+        elseif ( $token == ';' &&  $this->new_operator) {
+            $this->buffer_start = false;
+
+            // got object instantiation without parameters
+            if ( ! in_array( $this->current_func , $this->found_classes ) && !$this->method_call) {
+                $this->found_classes[] = $this->current_func;
+            }
+        }
+
     }
 }

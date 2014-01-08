@@ -19,3 +19,6 @@ ps_setgray();
 
 // Using DOM
 $dom = new DOMDocument();
+
+// Using Soap
+$dom = new SoapClient;
