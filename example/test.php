@@ -16,3 +16,6 @@ phpinfo();
 
 // PHP function that is not part of standard install
 ps_setgray();
+
+// Using DOM
+$dom = new DOMDocument();

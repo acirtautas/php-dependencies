@@ -44,7 +44,7 @@ class CodeDependency {
         $this->found_classes = array();
     }
 
-    public function findDependenciesByDirectory( $all_functions, $dir ) {
+    public function findDependenciesByDirectory( $dir ) {
         $Regex = new RegexIterator( new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $dir ) ), 
                                     self::php_file_match, 
                                     RecursiveRegexIterator::GET_MATCH );
